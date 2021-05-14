@@ -69,6 +69,10 @@ install(DIRECTORY config/
 catkin_install_python(PROGRAMS scripts/teleop_twist_keyboard.py scripts/cmdvel_converter_rpy.py
 DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
 
+# Install .sh scripts
+install(PROGRAMS scripts/deploy_breadcrumbs.sh
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}/scripts)
+
 # Mark executables and/or libraries for installation
 install(TARGETS subt_example_node teleop_node
   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
